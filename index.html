@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Resume Builder</h1>
+        </header>
+        <main>
+            <form id="resumeForm">
+                <!-- Form content remains the same -->
+                <section>
+                    
+                    <h2>Personal Information</h2>
+                     <label for="profilePhoto">Profile Picture:</label>
+    <input type="file" id="profilePhoto" accept="image/*" />
+    <!-- Other form fields -->
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required placeholder="Your full name">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required placeholder="Your email">
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" required placeholder="Your phone number">
+                    
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" placeholder="Your address">
+                </section>
+                
+                <section>
+                    <h2>Education</h2>
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" placeholder="Your degree">
+                    
+                    <label for="university">University:</label>
+                    <input type="text" id="university" placeholder="University name">
+                    
+                    <label for="graduationYear">Graduation Year:</label>
+                    <input type="number" id="graduationYear" placeholder="Year of graduation">
+                </section>
+                
+                <section>
+                    <h2>Experience</h2>
+                    <label for="experience">Experience:</label>
+                    <textarea id="experience" placeholder="Describe your work experience"></textarea>
+                </section>
+
+                <section>
+                    <h2>Skills</h2>
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" placeholder="Your skills (comma separated)">
+                </section>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+            
+            <div id="resumePreview" class="hidden">
+                <h2>Resume Preview</h2>
+                <div id="resume"></div>
+                <!-- PDF Download Button -->
+                <button id="downloadPDF">Download as PDF</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
